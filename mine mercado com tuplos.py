@@ -7,7 +7,7 @@ from lista import produtos
 
 # Produtos já cadastrados
 
-contador_id = 11
+
 
 
 # ------------------------------------------
@@ -15,10 +15,9 @@ contador_id = 11
 # ------------------------------------------
 
 def gerar_id():
-    global contador_id
-    novo_id = contador_id
-    contador_id += 1
-    return novo_id
+    if not produtos:
+        return 1
+    return max(produto[0] for produto in produtos) + 1
 
 
 def validar_texto(mensagem):

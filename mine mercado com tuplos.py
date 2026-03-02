@@ -1,23 +1,11 @@
 # ==========================================
 # MINI PROJETO 1 - SISTEMA DE GESTÃO DE LOJA
 # ==========================================
-
+from lista import produtos
 # Estrutura do Produto:
 # (id, nome, preco, quantidade, categoria)
 
 # Produtos já cadastrados
-produtos = [
-    (1, "Arroz", 1.99, 50, "Alimentacao"),
-    (2, "Leite", 0.89, 30, "Laticinios"),
-    (3, "Detergente", 2.49, 20, "Limpeza"),
-    (4, "Pao", 0.25, 100, "Padaria"),
-    (5, "Cafe", 3.99, 15, "Bebidas"),
-    (6, "Acucar", 1.20, 40, "Alimentacao"),
-    (7, "Champo", 4.50, 18, "Higiene"),
-    (8, "Massa", 1.10, 60, "Alimentacao"),
-    (9, "Sumo", 1.75, 25, "Bebidas"),
-    (10, "Sabonete", 0.99, 35, "Higiene")
-]
 
 contador_id = 11
 
@@ -147,7 +135,7 @@ def remover_produto():
 # Menu Principal
 # ------------------------------------------
 
-def menu():
+def main():
 
     print("\n📦 PRODUTOS DISPONÍVEIS NA LOJA:")
     listar_produtos()
@@ -179,4 +167,5 @@ def menu():
             print("❌ Opção inválida.")
 
 
-menu()
+if __name__ =="__main__":
+    main()
